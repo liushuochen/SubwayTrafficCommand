@@ -5,3 +5,7 @@ if __name__ == '__main__':
     if arg_list[1] == "version":
         import version
         version.get_version(url="/system/v1/version")
+    elif arg_list[1] == "start":
+        import start
+        start.start()
+        print("SubwayTraffic service running")
