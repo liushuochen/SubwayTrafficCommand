@@ -9,3 +9,5 @@ if __name__ == '__main__':
         import start
         start.start()
         print("SubwayTraffic service running")
+    else:
+        print("bash: command not found")
