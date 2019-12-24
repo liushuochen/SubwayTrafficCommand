@@ -7,7 +7,7 @@ if __name__ == '__main__':
         version.get_version(url="/system/v1/version")
     elif arg_list[1] == "start":
         import start
-        start.start()
+        start.start(url="/system/v1/login")
         print("SubwayTraffic service running")
     else:
         print("bash: command not found")
