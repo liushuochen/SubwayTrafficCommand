@@ -27,6 +27,5 @@ def start(**kwargs):
         with open("/opt/SubwayTrafficCommand/token.json", "w") as json_file:
             json_file.write(data)
         json_file.close()
-        print("token is:", token)
     else:
-        print("wrong")
+        print("login admin user error:", message)
