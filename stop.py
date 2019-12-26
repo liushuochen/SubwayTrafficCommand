@@ -18,7 +18,7 @@ def stop(**kwargs):
     message = result.json()
     http_code = result.status_code
     if http_code == 200:
-        pro_list = message["process"][::-1]
+        pro_list = message["process"].sort(reverse=True)
     else:
         print("stop service error:", message)
         return
