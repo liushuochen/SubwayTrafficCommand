@@ -16,6 +16,7 @@ def start(**kwargs):
         "password": conf.get("admin", "pwd")
     }
     body = json.dumps(body)
+    print("SubwayTraffic service starting... Please wait.")
     time.sleep(3)
     result = requests.post(data=body, **kwargs)
     message = result.json()
@@ -24,7 +25,8 @@ def start(**kwargs):
         token = message["token"]
         data = {"token": token}
         data = json.dumps(data, indent=4)
-        with open("/opt/SubwayTrafficCommand/token.json", "w") as json_file:
+        with open("/opt/SubwayTrafficCommand/token.json", "w") as \
+                json_file:
             json_file.write(data)
         json_file.close()
     else:
